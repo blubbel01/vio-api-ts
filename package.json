@@ -1,10 +1,10 @@
 {
     "name": "viov-api",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "NodeJS client for viov-api",
     "repository": {
         "type": "git",
-        "url": "https://github.com/blubbel01/viov-api.git"
+        "url": "https://github.com/blubbel01/vio-api-ts.git"
     },
     "main": "dist/api.js",
     "module": "./dist/api.mjs",
