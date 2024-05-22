@@ -49,7 +49,6 @@ export class GroupApi {
     protected authentications = {
         'default': <Authentication>new VoidAuth(),
         'vio_auth': new OAuth(),
-        'vio_auth': new OAuth(),
     }
 
     protected interceptors: Interceptor[] = [];
@@ -99,10 +98,6 @@ export class GroupApi {
         this.authentications.vio_auth.accessToken = token;
     }
 
-    set accessToken(token: string) {
-        this.authentications.vio_auth.accessToken = token;
-    }
-
     public addInterceptor(interceptor: Interceptor) {
         this.interceptors.push(interceptor);
     }
@@ -138,9 +133,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -209,9 +201,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -274,9 +263,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -345,9 +331,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -410,9 +393,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -481,9 +461,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -546,9 +523,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -617,9 +591,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -682,9 +653,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -753,9 +721,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -818,9 +783,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -889,9 +851,6 @@ export class GroupApi {
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
 
         let interceptorPromise = authenticationPromise;
@@ -954,9 +913,6 @@ export class GroupApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }

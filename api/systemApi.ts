@@ -40,7 +40,6 @@ export class SystemApi {
     protected authentications = {
         'default': <Authentication>new VoidAuth(),
         'vio_auth': new OAuth(),
-        'vio_auth': new OAuth(),
     }
 
     protected interceptors: Interceptor[] = [];
@@ -90,10 +89,6 @@ export class SystemApi {
         this.authentications.vio_auth.accessToken = token;
     }
 
-    set accessToken(token: string) {
-        this.authentications.vio_auth.accessToken = token;
-    }
-
     public addInterceptor(interceptor: Interceptor) {
         this.interceptors.push(interceptor);
     }
@@ -129,9 +124,6 @@ export class SystemApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }
@@ -197,9 +189,6 @@ export class SystemApi {
         };
 
         let authenticationPromise = Promise.resolve();
-        if (this.authentications.vio_auth.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
-        }
         if (this.authentications.vio_auth.accessToken) {
             authenticationPromise = authenticationPromise.then(() => this.authentications.vio_auth.applyToRequest(localVarRequestOptions));
         }

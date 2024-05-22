@@ -1,6 +1,6 @@
 {
     "name": "viov-api",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "NodeJS client for viov-api",
     "repository": {
         "type": "git",
